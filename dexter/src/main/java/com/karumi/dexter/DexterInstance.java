@@ -54,7 +54,7 @@ final class DexterInstance {
 
   DexterInstance(Context context, AndroidPermissionService androidPermissionService,
       IntentProvider intentProvider) {
-    this.context = context;
+    this.context = context.getApplicationContext();
     this.androidPermissionService = androidPermissionService;
     this.intentProvider = intentProvider;
     this.pendingPermissions = new TreeSet<>();
@@ -245,10 +245,12 @@ final class DexterInstance {
     pendingPermissions.removeAll(permissions);
     if (pendingPermissions.isEmpty()) {
       activity.finish();
+      activity = null;
       isRequestingPermission.set(false);
       rationaleAccepted.set(false);
-      listener.onPermissionsChecked(multiplePermissionsReport);
+      MultiplePermissionsListener currentListener = listener;
       listener = EMPTY_LISTENER;
+      currentListener.onPermissionsChecked(multiplePermissionsReport);
     }
   }
 

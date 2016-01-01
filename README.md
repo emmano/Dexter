@@ -1,4 +1,4 @@
-Dexter [![Build Status](https://travis-ci.org/Karumi/Dexter.svg?branch=master)](https://travis-ci.org/Karumi/Dexter) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dexter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dexter) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dexter-green.svg?style=true)](https://android-arsenal.com/details/1/2804)
+![Karumi logo][karumilogo] Dexter [![Build Status](https://travis-ci.org/Karumi/Dexter.svg?branch=master)](https://travis-ci.org/Karumi/Dexter) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dexter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dexter) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dexter-green.svg?style=true)](https://android-arsenal.com/details/1/2804)
 ======
 
 
@@ -160,7 +160,7 @@ Include the library in your ``build.gradle``
 
 ```groovy
 dependencies{
-    compile 'com.karumi:dexter:2.1.1'
+    compile 'com.karumi:dexter:2.1.4'
 }
 ```
 
@@ -170,14 +170,14 @@ or to your ``pom.xml`` if you are using Maven
 <dependency>
     <groupId>com.karumi</groupId>
     <artifactId>dexter</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.4</version>
     <type>aar</type>
 </dependency>
 
 ```
 Caveats
 -------
-* Persmission that does not exists before API Level 16, should check the OS version and use *ContextCompat.checkSelfPermission*. See [You Cannot Hold Non-Existent Permissions](https://commonsware.com/blog/2015/11/09/you-cannot-hold-nonexistent-permissions.html).
+* For permissions that did not exist before API Level 16, you should check the OS version and use *ContextCompat.checkSelfPermission*. See [You Cannot Hold Non-Existent Permissions](https://commonsware.com/blog/2015/11/09/you-cannot-hold-nonexistent-permissions.html).
 
 Do you want to contribute?
 --------------------------
@@ -191,6 +191,8 @@ Libraries used in this project
 ------------------------------
 
 * [Butterknife] [3]
+* [JUnit] [4]
+* [Mockito] [5]
 
 License
 -------
@@ -212,3 +214,6 @@ License
 [1]: ./art/sample.gif
 [2]: http://www.google.es/design/spec/patterns/permissions.html
 [3]: https://github.com/JakeWharton/butterknife
+[4]: https://github.com/junit-team/junit
+[5]: https://github.com/mockito/mockito
+[karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
